@@ -1,0 +1,95 @@
+Some of The Most Important SQL Commands:
+
+1. SELECT - extracts data from a database
+2. UPDATE - updates data in a database
+3. DELETE - deletes data from a database
+4. INSERT INTO - inserts new data into a database
+5. CREATE DATABASE - creates a new database
+6. ALTER DATABASE - modifies a database
+7. CREATE TABLE - creates a new table
+8. ALTER TABLE - modifies a table
+9. DROP TABLE - deletes a table
+10. CREATE INDEX - creates an index (search key)
+11. DROP INDEX - deletes an index
+
+MySQL SELECT Statement:
+
+SELECT * FROM table_name;
+SELECT CustomerName, City, Country FROM Customers;
+
+SELECT DISTINCT:
+SELECT DISTINCT Country FROM Customers;
+SELECT COUNT(DISTINCT Country) FROM Customers;
+
+MySQL WHERE Clause:
+SELECT * FROM Customers WHERE Country = 'Mexico';
+
+MySQL AND, OR and NOT Operators:
+SELECT * FROM Customers
+WHERE Country = 'Germany' AND City = 'Berlin';
+SELECT * FROM Customers
+WHERE City = 'Berlin' OR City = 'Stuttgart';
+SELECT * FROM Customers
+WHERE NOT Country = 'Germany';
+
+SELECT * FROM Customers
+WHERE Country = 'Germany' AND (City = 'Berlin' OR City = 'Stuttgart');
+
+MySQL ORDER BY Keyword: (ASC|DESC)
+SELECT * FROM Customers
+ORDER BY Country;
+SELECT * FROM Customers
+ORDER BY Country DESC;
+
+MySQL INSERT INTO Statement:
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+MySQL UPDATE Statement:
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City = 'Frankfurt'
+WHERE CustomerID = 1;
+
+UPDATE Customers
+SET PostalCode = 00000
+WHERE Country = 'Mexico';
+
+MySQL DELETE Statement:
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+DELETE FROM table_name; // ALL RECORDS ARE DELETED
+
+The MySQL LIMIT Clause:
+SELECT * FROM Customers
+LIMIT 3;
+
+SELECT * FROM Customers LIMIT 3 OFFSET 3; // What if we want to select records 4 - 6 (inclusive)? The SQL query below says "return only 3 records, start on record 4 (OFFSET 3)":
+
+MySQL MIN() and MAX() Functions:
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+
+MySQL COUNT(), AVG() and SUM() Functions:
+SELECT COUNT(ProductID)
+FROM Products;
+SELECT AVG(Price)
+FROM Products;
+SELECT SUM(Quantity)
+FROM OrderDetails;
+
+MySQL LIKE Operator:
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%'; // returns all customers with a CustomerName starting with "a":
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%a'; // returns all customers with a CustomerName ending with "a":
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%or%'; // returns all customers with a CustomerName that have "or" in any position:
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%'; // returns all customers with a CustomerName that have "r" in the second position:
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__%'; // returns all customers with a CustomerName that starts with "a" and are at least 3 characters in length:
+SELECT * FROM Customers
+WHERE ContactName LIKE 'a%o'; // returns all customers with a ContactName that starts with "a" and ends with "o":
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'a%'; // returns all customers with a CustomerName that does NOT start with "a":

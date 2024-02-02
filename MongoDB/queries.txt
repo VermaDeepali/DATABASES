@@ -1,0 +1,4 @@
+// find
+
+db.collection.find() // get all records
+db.collection.findOne() // get sinlge record

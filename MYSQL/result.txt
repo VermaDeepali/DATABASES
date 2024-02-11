@@ -1,0 +1,12 @@
+// Read query
+
+Query results: [
+  {
+    id: 1,
+    name: 'Deepali',
+    age: 23,
+    dob: '17-10-1999',
+    created_at: null,
+    updated_at: null
+  }
+]

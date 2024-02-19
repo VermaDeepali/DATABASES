@@ -25,7 +25,7 @@ Explore the queries and examples provided for each database:
 
 -- JOIN Operations
 
-``DynamoDB`` (In-progress)
+``DynamoDB`` (To do)
 
 -- Querying by Partition Key
 

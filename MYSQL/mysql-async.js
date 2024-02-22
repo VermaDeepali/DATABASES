@@ -58,6 +58,74 @@ async function executeDeleteQuery() {
     }
 }
 
+// Function to perform INNER JOIN query
+async function executeInnerJoinQuery() {
+    try {
+        const [rows] = await pool.execute(`
+            SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+            FROM Orders
+            INNER JOIN Customers
+            ON Orders.CustomerID = Customers.CustomerID
+        `);
+        console.log('INNER JOIN Query results:', rows);
+        return rows;
+    } catch (error) {
+        console.error('Error executing INNER JOIN query:', error);
+        throw error;
+    }
+}
+
+// Function to perform LEFT JOIN query
+async function executeLeftJoinQuery() {
+    try {
+        const [rows] = await pool.execute(`
+            SELECT Customers.CustomerName, Orders.OrderID, Orders.OrderDate
+            FROM Customers
+            LEFT JOIN Orders
+            ON Customers.CustomerID = Orders.CustomerID
+        `);
+        console.log('LEFT JOIN Query results:', rows);
+        return rows;
+    } catch (error) {
+        console.error('Error executing LEFT JOIN query:', error);
+        throw error;
+    }
+}
+
+// Function to perform RIGHT JOIN query
+async function executeRightJoinQuery() {
+    try {
+        const [rows] = await pool.execute(`
+            SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+            FROM Customers
+            RIGHT JOIN Orders
+            ON Customers.CustomerID = Orders.CustomerID
+        `);
+        console.log('RIGHT JOIN Query results:', rows);
+        return rows;
+    } catch (error) {
+        console.error('Error executing RIGHT JOIN query:', error);
+        throw error;
+    }
+}
+
+// Function to perform CROSS JOIN query
+async function executeCrossJoinQuery() {
+    try {
+        const [rows] = await pool.execute(`
+            SELECT Customers.CustomerName, Orders.OrderID, Orders.OrderDate
+            FROM Customers
+            CROSS JOIN Orders
+        `);
+        console.log('CROSS JOIN Query results:', rows);
+        return rows;
+    } catch (error) {
+        console.error('Error executing CROSS JOIN query:', error);
+        throw error;
+    }
+}
+
+
 // Main function to connect and execute queries
 async function main() {
     try {
@@ -72,6 +140,18 @@ async function main() {
 
         // Execute DELETE query
         await executeDeleteQuery();
+
+        // Execute INNER JOIN query
+        await executeInnerJoinQuery();
+
+        // Execute LEFT JOIN query
+        await executeLeftJoinQuery();
+
+        // Execute RIGHT JOIN query
+        await executeRightJoinQuery();
+
+        // Execute CROSS JOIN query
+        await executeCrossJoinQuery();
 
         // Close the connection when done
         await pool.end();

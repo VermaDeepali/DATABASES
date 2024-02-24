@@ -27,6 +27,8 @@ Explore the queries and examples provided for each database:
 
 ``DynamoDB`` (To do)
 
+-- Setup DynamoDB Locally --> https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html 
+
 -- Querying by Partition Key
 
 -- Secondary Index Query

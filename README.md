@@ -19,7 +19,7 @@ Explore the queries and examples provided for each database:
 
 -- Aggregation Pipeline (Will be adding soon)
 
-``MySQL`` (In-progress)
+``MySQL`` (Completed)
 
 -- SELECT Statement
 

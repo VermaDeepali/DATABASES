@@ -25,7 +25,7 @@ Explore the queries and examples provided for each database:
 
 -- JOIN Operations
 
-``DynamoDB`` (To do)
+``DynamoDB`` (In progress)
 
 -- Setup DynamoDB Locally --> https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html 
 

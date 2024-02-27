@@ -10,7 +10,7 @@ const LOCAL_DYNAMODB_CONFIG = {
 };
 
 
-export async function createDocumentClient() {
+export async function createDynamoDBClient() {
     const commonOptions = {
         region: REGION,
     };

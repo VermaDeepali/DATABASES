@@ -1,0 +1,38 @@
+// SCHEMAS ARE ADDED FOR LOCAL DYNAMO DB SETUP. IF USING AWS CLI NO NEED TO MENTION ENDPOINT-URL
+
+// CREATE TABLE
+
+aws dynamodb create-table \
+    --table-name customers \
+    --attribute-definitions \
+        AttributeName=id,AttributeType=S \
+    --key-schema \
+        AttributeName=id,KeyType=HASH \
+    --provisioned-throughput \
+        ReadCapacityUnits=5,WriteCapacityUnits=5 \
+    --table-class STANDARD \
+    --endpoint-url http://localhost:8000
+
+
+// READ TABLE
+aws dynamodb get-item --consistent-read \
+    --table-name customers \
+    --key '{ "id": {"S": "1"}}' \
+    --endpoint-url http://localhost:8000
+
+
+// UPDATE TABLE
+
+aws dynamodb put-item \
+    --table-name customers \
+    --item \        
+    '{
+  "id": {
+    "S": "1"
+        }
+    }' \
+    --endpoint-url http://localhost:8000
+
+// DELETE TABLE
+
+aws dynamodb delete-table --table-name customers --endpoint-url http://localhost:8000

@@ -36,3 +36,8 @@ aws dynamodb put-item \
 // DELETE TABLE
 
 aws dynamodb delete-table --table-name customers --endpoint-url http://localhost:8000
+
+
+// LIST TABLE NAMES
+
+aws dynamodb list-tables --endpoint-url http://localhost:8000

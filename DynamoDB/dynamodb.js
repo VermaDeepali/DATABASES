@@ -1,5 +1,5 @@
 const DynamoDBClient = require("@aws-sdk/client-dynamodb");
-const { REGION, ENV, DYNAMODB_ENDPOINT } = process.env;
+const { REGION, ENV, DYNAMODB_ENDPOINT, ACCESS_KEY_ID, SECRET_ACCESS_KEY } = process.env;
 
 const LOCAL_DYNAMODB_CONFIG = {
     endpoint: DYNAMODB_ENDPOINT,
@@ -16,7 +16,7 @@ export async function createDocumentClient() {
     };
 
     const options =
-    ENV === "local"
+        ENV === "local"
             ? { ...commonOptions, ...LOCAL_DYNAMODB_CONFIG }
             : commonOptions;
     return new DynamoDBClient(options);

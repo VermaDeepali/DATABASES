@@ -10,6 +10,8 @@ Welcome to the Database Query Repository! This repository serves as a comprehens
 
 ### `Redis`: An in-memory data structure store used as a database, cache, and message broker.
 
+### `PostgreSQL` : It is a powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
+
 Query Examples
 Explore the queries and examples provided for each database:
 

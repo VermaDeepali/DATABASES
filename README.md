@@ -41,5 +41,6 @@ Explore the queries and examples provided for each database:
 
 -- Using Pub/Sub for Messaging
 
+``PostgresSQL`` (Not yet added)
 
 Feel free to explore and adapt these queries for your specific needs. Happy querying! ;)

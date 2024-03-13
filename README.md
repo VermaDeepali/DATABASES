@@ -17,7 +17,7 @@ Explore the queries and examples provided for each database:
 
 ``MongoDB`` (In-progress)
 
--- Basic Query
+-- Basic Queries
 
 -- Aggregation Pipeline (Will be adding soon)
 

@@ -1,6 +1,8 @@
 ## Database Query Repository
 
-Welcome to the Database Query Repository! This repository serves as a comprehensive collection of queries and examples related to various databases that I have utilized throughout my experience. The covered databases include:
+Welcome to the Database Query Repository! This repository serves as a comprehensive collection of queries and examples related to various databases that I have utilized throughout my experience. 
+
+The covered databases include:
 
 ### `MongoDB`: A NoSQL database known for its flexibility and scalability.
 

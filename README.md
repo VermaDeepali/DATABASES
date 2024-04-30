@@ -45,4 +45,4 @@ Explore the queries and examples provided for each database:
 
 ``PostgresSQL`` (Not yet added)
 
-Feel free to explore and adapt these queries for your specific needs. Happy querying! ;)
+Feel free to explore and adapt these queries for your specific needs. Happy querying!

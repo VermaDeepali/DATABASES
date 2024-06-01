@@ -25,7 +25,7 @@ Explore the queries and examples provided for each database:
 
 ``MySQL`` (Completed)
 
--- SELECT Statement
+-- SELECT Statements
 
 -- JOIN Operations
 

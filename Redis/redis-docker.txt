@@ -1,0 +1,14 @@
+Redis with docker
+
+1. Create a new container docker
+---> run —name nameofthecontainer -p 6379:6379 redis 
+It’ll create a container
+2. To go inside container and run the terminal 
+---> docker exec -it redis-streak rdb-cli 
+It’ll lead you the the terminal 
+3. To add a key-value 
+---> set name "Deepali" 
+It’ll add value as Deepali in the key name
+4. To get the value of key 
+---> get name 
+It’ll return Deepali
